@@ -17,7 +17,7 @@ module.exports = {
 	// entry: './src/app.js',
 	entry: {
 		app: './src/index.js',
-		contact: './src/contact.js'
+		// contact: './src/contact.js'
 	},
 	output: {
 		// path: '/Users/eu-team/eu-work/self-practice/09_webpack101-customize/dist',
@@ -66,13 +66,13 @@ module.exports = {
 	        excludeChunks: ['contact'],
 	        template: './src/index.pug'
 	    }),
-	    new HtmlWebpackPlugin({
-	        title: 'Contact Page',
-	        hash: true,
-	        chunks: ['contact'],
-					filename: 'contact.html',
-          template: './src/contact.html'
-	    }),
+	    // new HtmlWebpackPlugin({
+	    //     title: 'Contact Page',
+	    //     hash: true,
+	    //     chunks: ['contact'],
+					// filename: 'contact.html',
+     //      template: './src/contact.html'
+	    // }),
 	    new ExtractTextPlugin({
 	    	filename: 'app.css',
 	    	disable: !isProd,
