@@ -40,7 +40,7 @@ module.exports = {
 				use: ['html-loader', 'pug-html-loader']
 			},
 			{
-				test: /\.(jpe?g|png|gif|svg)$/i,
+				test: /\.(jpe?g|png|gif|svg|eot|ttf|woff)$/i,
 				use: [
 					'file-loader?name=img/[name].[hash:6].[ext]',
 					'image-webpack-loader'
