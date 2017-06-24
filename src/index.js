@@ -6,16 +6,23 @@ import './index.pug';
 // ==========================================================================
 import './sass/style.scss';
 
-// import js
+// import components
 // ==========================================================================
 import App from './components/App';
+import StorePicker from './components/StorePicker';
 
-// index js
+// index plugins
 // ==========================================================================
 import React from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter, Match, Miss } from 'react-router';
 
-import StorePicker from './components/StorePicker';
+const Root = () => {
+	return (
+		<BrowserRouter>
+		</BrowserRouter>
+	)
+}
 
 
 render(<App />, document.querySelector('#main'));
