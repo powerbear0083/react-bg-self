@@ -6,23 +6,32 @@ import './index.pug';
 // ==========================================================================
 import './sass/style.scss';
 
-// import components
+// import components js
 // ==========================================================================
 import App from './components/App';
 import StorePicker from './components/StorePicker';
+import NotFound from './components/NotFound';
 
-// index plugins
+// import react plugins 
 // ==========================================================================
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Match, Miss } from 'react-router';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+// Index pages setting
+// ==========================================================================
 
 const Root = () => {
 	return (
 		<BrowserRouter>
+			<div>
+				<Route exact path="/" component={ StorePicker } />
+				<Route path="/store/:storeId" component={ App } />
+
+			</div>
 		</BrowserRouter>
 	)
 }
 
 
-render(<App />, document.querySelector('#main'));
+render(<Root />, document.querySelector('#main'));
