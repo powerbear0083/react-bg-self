@@ -16,21 +16,22 @@ import NotFound from './components/NotFound';
 // ==========================================================================
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import {  BrowserRouter as Router, Route } from 'react-router-dom';
 
 // Index pages setting
 // ==========================================================================
 
 const Root = () => {
 	return (
-		<BrowserRouter>
+		<Router>
 			<div>
 				<Route exact path="/" component={ StorePicker } />
 				<Route path="/store/:storeId" component={ App } />
 
 			</div>
-		</BrowserRouter>
+		</Router>
 	)
+	
 }
 
 
