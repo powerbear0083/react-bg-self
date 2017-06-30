@@ -1,8 +1,12 @@
 import React from 'react';
 
 const NotFound = () => {
-	<div>
-		<h3>No match </h3>
-	</div>
+	
+	return (
+		<div>
+			<h2> Not Found !!!! </h2>
+		</div>
+	)
+	
 }
 export default NotFound;
